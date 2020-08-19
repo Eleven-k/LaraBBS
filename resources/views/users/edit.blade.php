@@ -17,20 +17,33 @@
                     @include('shared._error')
 
                     <div class="form-group">
-                        <label htmlFor="name-field">用户名</label>
-                        <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name) }}" />
-                    </div>
-                    <div class="form-group">
-                        <label htmlFor="email-field">邮 箱</label>
-                        <input class="form-control" type="text" name="email" id="email-field" value="{{ old('email', $user->email) }}" />
-                    </div>
-                    <div class="form-group">
-                        <label htmlFor="introduction-field">个人简介</label>
-                        <textarea name="introduction" id="introduction-field" class="form-control" rows="3">{{ old('introduction', $user->introduction) }}</textarea>
-                    </div>
-                    <div class="well well-sm">
-                        <button type="submit" class="btn btn-primary">保存</button>
-                    </div>
+                                <label for="name-field">用户名</label>
+                                <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name) }}" />
+                            </div>
+                            <div class="form-group">
+                                <label for="introduction-field">个人简介</label>
+                                <textarea name="introduction" id="introduction-field" class="form-control" rows="3">{{ old('introduction', $user->introduction) }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label htmlFor="password">密码：</label>
+                                <input type="password" name="password" class="form-control" value="{{ old('password') }}" />
+                            </div>
+                            <div class="form-group">
+                                <label htmlFor="password_confirmation">确认密码：</label>
+                                <input type="password" name="password_confirmation" class="form-control" value="{{ old('password_confirmation') }}" />
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="" class="avatar-label">用户头像</label>
+                                <input type="file" name="avatar" class="form-control-file">
+
+                                @if($user->avatar)
+                                <br>
+                                <img class="thumbnail img-responsive" src="{{ $user->avatar }}" width="200" />
+                                @endif
+                            </div>
+                            <div class="well well-sm">
+                                <button type="submit" class="btn btn-primary">保存</button>
+                            </div>
                 </form>
             </div>
         </div>
