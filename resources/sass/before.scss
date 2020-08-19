@@ -1,0 +1,394 @@
+body {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, 微软雅黑, Arial, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: #707070;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  // 导航条
+  .nav {
+    height: 60px;
+    line-height: 60px;
+    background-color: #ffffff;
+
+    .container {
+      max-width: 100%;
+
+      .col-6 {
+        padding: 0;
+
+        .col {
+          padding: 0;
+
+          .nav-title {
+            color: #2d8cf0;
+            font-size: 22px;
+            font-weight: 700;
+          }
+
+          .nav-right {
+            float: right;
+
+            .create {
+              border-radius: 16px;
+              border: 1px solid #e7eaf3;
+              width: 60px;
+              height: 32px;
+              line-height: 18px;
+              margin-right: 6px;
+              color: #515a6e;
+              font-size: 14px;
+              background-color: #ffffff;
+            }
+
+            .login {
+              border-radius: 16px;
+              font-size: 14px;
+              width: 60px;
+              height: 32px;
+              line-height: 18px;
+            }
+
+            .dropdown-toggle {
+              height: 60px;
+              line-height: 43px;
+            }
+
+            .dropdown-item {
+              height: 40px;
+              line-height: 33px;
+            }
+          }
+
+          .flex-nowrap{
+              height: 62px;
+              input{
+                  width: 50%;
+                  margin: 14px 60px;
+                  border-radius: 20px;
+                  height: 33px;
+                  font-size: 14px;
+              }
+          }
+        }
+      }
+    }
+  }
+
+
+  // 内容
+  .content {
+    .container {
+      max-width: 100%;
+
+      .col-6 {
+        padding: 0;
+
+        div {
+          float: left;
+        }
+
+
+
+        .posts-container {
+          height: auto;
+          margin-top: 10px;
+          width: 70%;
+          background: #ffffff;
+          border-radius: 0.25rem;
+          border: 1px solid #e7eaf3;
+
+          hr{
+              margin: 0;
+          }
+
+          .posts-addons {
+            border-bottom: 1px solid #efefef;
+            width: 100%;
+            padding: 27px;
+
+            .posts-filter-wrap {
+
+              .filter-item {
+                width: 80px;
+                text-align: center;
+
+                a {
+
+                  font-size: 13px;
+                  color: #77838f;
+                }
+              }
+            }
+          }
+
+
+
+          .posts-create {
+            position: absolute;
+            right: 32.2222%;
+            top: 32px;
+
+            .btn-primary {
+              width: 77px;
+              height: 32px;
+              line-height: 18px;
+              font-size: 14px;
+              span{
+                font-size: 12px;
+                margin-right: 4px;
+              }
+            }
+          }
+
+          .post-item {
+            width: 100%;
+            border-bottom: 1px solid #efefef;
+            display: flex;
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 0.25rem;
+            }
+
+            &:hover {
+              background-color: #f7f9fb;
+            }
+
+            .post-item-userinfo {
+              margin: 25px 20px;
+              position: relative;
+
+              img {
+                width: 214px;
+                height: 50px;
+                border-radius: 50%
+              }
+            }
+
+            .post-item-content {
+              padding: 25px 20px 25px 0;
+
+              .nickname {
+                color: #14171a;
+                font-size: 14px;
+                font-weight: 700;
+              }
+
+              .time {
+                margin-left: 10px;
+                font-size: 12px;
+                color: #657786;
+              }
+
+              .post-item-content-text {
+                font-size: 14px;
+                line-height: 24px;
+                margin: 4px 0;
+                text-align: justify;
+
+                a {
+                  color: #495060;
+                }
+              }
+
+            }
+
+            .post-item-praise {
+              width: 80px;
+              height: 100px;
+
+              .praise-wrap {
+                width: 50px;
+                height: 50px;
+                line-height: 35px;
+                background: #f7f9fb;
+                margin: 25px 20px 25px 10px;
+                border-radius: 3px;
+
+                .praise-bottom {
+                  width: 100%;
+                  text-align: center;
+
+                  .number {
+                    position: relative;
+                    top: -18px;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+
+            nav {
+              margin: 20px;
+
+              ul {
+                margin: 0;
+
+                li {
+                  padding-right: 10px;
+                }
+              }
+            }
+          }
+
+
+
+        }
+
+        .sidebar {
+          height: auto;
+          background-color: #ffffff;
+          margin-top: 10px;
+          border-radius: 0.25rem;
+          border: 1px solid #e7eaf3;
+          width: 29%;
+          float: right;
+
+          div {
+            float: none;
+          }
+
+          .main-list {
+
+            a {
+              color: #657786;
+
+              span {
+                position:relative;
+                top: 1px;
+                margin-right: 20px;
+                font-weight: 700;
+              }
+
+              .group-item {
+                font-size: 14px;
+                padding: 10px 0;
+                border-bottom: 1px solid #efefef;
+                padding-left: 7%;
+              }
+            }
+
+            a:hover {
+              color: #84929e;
+            }
+          }
+
+          .links-wrap {
+            margin: 13px 10px 0;
+            font-size: 12px;
+          }
+
+          .foot {
+            margin: 13px 10px;
+            .form-group{
+                margin-bottom: 1.65rem;
+                .col-md-6{
+                    max-width: 100%;
+                    width: 100%;
+                    input{
+                        width: 244px;
+                    }
+    
+                    img{
+                        position: absolute;
+                        width: 118px;
+                        top: -14px;
+                        right: 16px;
+                    }
+                }
+                a{
+                    color: blue;
+                }
+            }
+            
+            .offset-md-4{
+                margin: 0;
+                button{
+                    width: 244px;
+                }
+            }
+            
+
+            img {
+              width: 50%;
+              margin: 0 auto;
+              display: block;
+            }
+
+            .form-check-input{
+                width: 16px;
+                height: 16px;
+                top: -4px;
+            }
+
+            .btn-link{
+                font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .layout-footer {
+    padding: 24px 0;
+
+    .footer-wrap {
+      height: 100%;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+
+      .footer-container {
+        color: #9399a6;
+        font-size: 14px;
+
+        a {
+          color: #7db7f4;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+//   个人页面
+.posts-container{
+    .card-body{
+        padding-bottom: 20px;
+    }
+}
+}

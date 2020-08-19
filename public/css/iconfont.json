@@ -1,0 +1,44 @@
+{
+  "id": "1960191",
+  "name": "A计划",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "731513",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "5330172",
+      "name": "铅笔",
+      "font_class": "qianbi",
+      "unicode": "e768",
+      "unicode_decimal": 59240
+    },
+    {
+      "icon_id": "9882719",
+      "name": "尖括号",
+      "font_class": "changyongicon-",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "11499540",
+      "name": "置顶",
+      "font_class": "zhiding",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "14562117",
+      "name": "桃心",
+      "font_class": "taoxin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}
