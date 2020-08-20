@@ -56,7 +56,7 @@
                                                     <label for="ivu-form-item-label">用户名</label>
                                                     <div class="ivu-input-type-text"> 
                                                         <div class="ivu-input-box">
-                                                        <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name) }}" style="background-color: #d8dde6;">
+                                                        <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name) }}" disabled ="disabled" style="background-color: #d8dde6;">
                                                         </div>
                                                     </div>
                                                 </div>
