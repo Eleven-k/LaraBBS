@@ -150,6 +150,7 @@ img {
             background: #ffffff;
             border-radius: 0.25rem;
             border: 1px solid #e7eaf3;
+            box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, .2);
 
             hr {
               margin: 0;
@@ -308,6 +309,7 @@ img {
             border: 1px solid #e7eaf3;
             width: 86.7%;
             float: right;
+            box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, .2);
 
             div {
               float: none;
@@ -426,6 +428,8 @@ img {
 
   //   个人页面
   .posts-container {
+    box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, .2);
+
     .card-body {
       padding-bottom: 20px;
     }
@@ -434,6 +438,8 @@ img {
   .user-show {
     .col-8 {
       .posts-container {
+        box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, .2);
+
         .ivu-menu-item {
           font-size: 14px;
           margin: 0 19px;
@@ -449,10 +455,12 @@ img {
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          img{
+
+          img {
             width: 150px;
           }
-          .sky{
+
+          .sky {
             height: 64px;
             line-height: 64px;
             font-size: 14px;
@@ -464,6 +472,8 @@ img {
 
     .col-4 {
       .sidebar {
+        box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, .2);
+
         .user-bg {
           height: 100px;
           background: #2d8cf0;
@@ -520,6 +530,276 @@ img {
     }
   }
 
+  .user-edit {
+    .col-8 {
+      .posts-container {
+        box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, .2);
+
+        .ivu-form-item {
+          .ivu-form-item-content {
+            margin: 60px 30px;
+
+            .portrait {
+              margin-left: 80px;
+
+              img {
+                display: block;
+                border-radius: 5px;
+                width: 100px;
+                height: 100px;
+              }
+            }
+
+            .ivu-information {
+              margin: 24px 0;
+
+              label {
+                float: left;
+                font-size: 14px;
+                color: #515a6e;
+                line-height: 10.75px;
+                padding: 10px 12px 10px 0;
+                width: 80px;
+                text-align: right;
+              }
+
+              .ivu-input-type-text {
+                margin-left: 80px;
+                position: relative;
+                font-size: 14px;
+
+                .ivu-input-box {
+                  width: 300px;
+                  max-width: 100%;
+
+                  input {
+                    background-color: #f7f9fb;
+                    font-size: 14px;
+                    height: 30px;
+                  }
+
+                  input::-webkit-input-placeholder {
+                    color: #c5c8ce;
+                  }
+        
+                  input::-moz-placeholder {
+                    /* Mozilla Firefox 19+ */
+                    color: #c5c8ce;
+                  }
+        
+                  input:-moz-placeholder {
+                    /* Mozilla Firefox 4 to 18 */
+                    color: #c5c8ce;
+                  }
+        
+                  input:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: #c5c8ce;
+                  }
+
+                  textarea {
+                    background-color: #f7f9fb;
+                    font-size: 14px;
+                    height: 110px;
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .col-4 {
+      .sidebar {
+        box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, .2);
+
+        .user-bg {
+          height: 100px;
+          background: #2d8cf0;
+          border-radius: 0.25rem 0.25rem 0 0;
+        }
+
+        .user-info {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: flex-start;
+
+          margin: -20px 16px 0;
+
+          .user-avatar {
+            border-radius: 5px;
+            border: 3px solid #fff;
+
+            img {
+              display: block;
+              border-radius: 5px;
+              width: 60px;
+              height: 60px;
+            }
+          }
+
+          .user-name {
+            height: 34px;
+            color: #5c7390;
+            position: relative;
+            margin-left: 10px;
+          }
+        }
+
+        .card-body {
+          margin-top: 15px;
+          padding: 0 0 0 20px;
+        }
+
+        .menu-modify {
+          height: 50px;
+          line-height: 50px;
+          font-size: 14px;
+          padding-left: 20px;
+
+          &:hover {
+            background-color: #f0faff;
+            color: #2d8cf0;
+          }
+        }
+      }
+    }
+  }
+
+  // 发布文章页面
+  .article-create {
+    background-color: #ffffff;
+    margin: 10px 16.5%;
+    border-top: 2px solid #dce8f9;
+    box-shadow: 0 0 1px #d3dce7;
+
+    .compose-wrap {
+      min-height: 500px;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 10% 30px;
+
+      .type {
+        margin: 0 197px;
+
+        .ivu-radio-group-button {
+          border-radius: 0 0 10px 10px !important;
+          overflow: hidden;
+
+
+          .vu-radio-default {
+            width: 58px;
+            text-align: center;
+            height: 32px;
+            line-height: 32px;
+            color: #2d8cf0;
+            font-size: 14px;
+            background-color: #dce8f9;
+            float: left;
+          }
+        }
+      }
+
+      .article {
+        .form-group {
+          margin: 10px 0;
+
+          input {
+            height: 32px;
+            font-size: 14px;
+            border-radius: 0;
+            border: none;
+            resize: none;
+            padding: 10px;
+            background-color: #fafafa;
+          }
+
+          input::-webkit-input-placeholder {
+            color: #c5c8ce;
+          }
+
+          input::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: #c5c8ce;
+          }
+
+          input:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: #c5c8ce;
+          }
+
+          input:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #c5c8ce;
+          }
+
+          textarea {
+            height: 125px;
+            min-height: 125px;
+            max-height: 230px;
+            font-size: 14px;
+            border-radius: 0;
+            border: none;
+            resize: none;
+            padding: 10px;
+            background-color: #fafafa;
+          }
+
+          textarea::-webkit-input-placeholder {
+            color: #c5c8ce;
+          }
+
+          textarea::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: #c5c8ce;
+          }
+
+          textarea:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: #c5c8ce;
+          }
+
+          textarea:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #c5c8ce;
+          }
+
+          select {
+            width: 92px;
+            height: 23px;
+            font-size: 14px;
+            position: absolute;
+            top: 76px;
+            padding: 0 0 0 7px;
+            border-radius: 25px;
+            background-color: #dce8f9;
+            color: #2d8cf0;
+
+            option {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .well-sm {
+          float: right;
+          margin: 19px 0 13px;
+
+          button {
+            height: 32px;
+            width: 60px;
+            line-height: 18px;
+            font-size: 14px;
+            background-color: #2d8cf0;
+            border-color: #2d8cf0;
+          }
+        }
+      }
+    }
+  }
 
 }
 

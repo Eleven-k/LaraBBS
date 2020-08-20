@@ -29,7 +29,7 @@
                                     <a href="{{route('users.edit',Auth::id())}}">
                                         <div class="menu-modify">基本信息</div>
                                     </a>
-                                    <a href="{{route('password.edit',Auth::id())}}">
+                                    <a href="{{route('users.edit',Auth::id())}}">
                                         <div class="menu-modify">修改密码</div>
                                     </a>
                                 </div>
@@ -39,45 +39,47 @@
                                 <div class="posts-container" style="width:106.5%; float: right;">
                                     <div class="ivu-form-item">
                                         <div class="ivu-form-item-content">
-                                            <form action="{{ route('users.update', $user->id) }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+                                            <form action="{{ route('password.update', $user->id) }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                                                 {{ method_field('PATCH') }}
                                                 {{ csrf_field() }}
 
                                                 @include('shared._errors')
+                                                <div class="passwordEdit">
+                                                    <div class="ivu-information">
+                                                        <label for="ivu-form-item-label">当前密码</label>
+                                                        <div class="ivu-input-type-text">
+                                                            <div class="ivu-input-box">
+                                                                <input class="form-control" type="password" name="password" placeholder="请输入当前密码" id="name-field" value="{{ old('password') }}" style="border: 1px solid #f7f9fb; height: 32px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                                <div class="portrait">
-                                                    @if($user->avatar)
-                                                    <img class="thumbnail img-responsive" src="{{ $user->avatar }}" width="200" />
-                                                    @endif
-                                                    <input type="file" name="avatar" class="form-control-file">
-                                                </div>
+                                                    <div class="ivu-information">
+                                                        <label for="ivu-form-item-label">新密码</label>
+                                                        <div class="ivu-input-type-text">
+                                                            <div class="ivu-input-box">
+                                                                <input class="form-control" type="password" name="password" placeholder="请输入新密码" id="name-field" value="{{ old('password') }}" style="border: 1px solid #f7f9fb; height: 32px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                                <div class="ivu-information">
-                                                    <label for="ivu-form-item-label">用户名</label>
-                                                    <div class="ivu-input-type-text"> 
-                                                        <div class="ivu-input-box">
-                                                        <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name) }}" style="background-color: #d8dde6;">
+                                                    <div class="ivu-information">
+                                                        <label for="ivu-form-item-label">确认密码</label>
+                                                        <div class="ivu-input-type-text">
+                                                            <div class="ivu-input-box">
+                                                                <input class="form-control" type="password" name="password_confirmation" placeholder="请再次输入新密码" id="name-field" value="{{ old('password_confirmation') }}" style="border: 1px solid #f7f9fb; height: 32px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ivu-information">
+                                                        <div class="ivu-input-type-text">
+                                                            <div class="ivu-input-box">
+                                                                <button type="submit" class="btn btn-primary">保存</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <div class="ivu-information">
-                                                    <label for="ivu-form-item-label">个性签名</label>
-                                                    <div class="ivu-input-type-text"> 
-                                                        <div class="ivu-input-box">
-                                                        <textarea name="introduction" id="introduction-field" class="form-control" rows="3">{{ old('introduction', $user->introduction) }}</textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ivu-information">
-                                                    <div class="ivu-input-type-text"> 
-                                                        <div class="ivu-input-box">
-                                                        <button type="submit" class="btn btn-primary">保存</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
                                             </form>
                                         </div>
                                     </div>

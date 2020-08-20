@@ -21,7 +21,7 @@
                                         </div>
                                     </div>
                                     <div class="posts-create">
-                                        <a class="btn btn-primary" href="#" role="button"><span class="iconfont icon-qianbi"></span>发布</a>
+                                        <a class="btn btn-primary" href="{{ route('articles.create') }}" role="button"><span class="iconfont icon-qianbi"></span>发布</a>
                                     </div>
 
                                     <div class="post-item">
