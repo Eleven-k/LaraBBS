@@ -471,6 +471,108 @@ img {
     text-align: center;
     margin: 30px 0 30px 0;
   }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content {
+    margin: 60px 30px;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .portrait {
+    margin-left: 80px;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .portrait img {
+    display: block;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .ivu-information {
+    margin: 24px 0;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .ivu-information label {
+    float: left;
+    font-size: 14px;
+    color: #515a6e;
+    line-height: 10.75px;
+    padding: 10px 12px 10px 0;
+    width: 80px;
+    text-align: right;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .ivu-information .ivu-input-type-text {
+    margin-left: 80px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .ivu-information .ivu-input-type-text .ivu-input-box {
+    width: 300px;
+    max-width: 100%;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .ivu-information .ivu-input-type-text .ivu-input-box input {
+    background-color: #f7f9fb;
+    font-size: 14px;
+    height: 30px;
+  }
+
+  .user-edit .col-8 .posts-container .ivu-form-item .ivu-form-item-content .ivu-information .ivu-input-type-text .ivu-input-box textarea {
+    background-color: #f7f9fb;
+    font-size: 14px;
+    height: 110px;
+  }
+
+  .user-edit .col-4 .sidebar .user-bg {
+    height: 100px;
+    background: #2d8cf0;
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+
+  .user-edit .col-4 .sidebar .user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: -20px 16px 0;
+  }
+
+  .user-edit .col-4 .sidebar .user-info .user-avatar {
+    border-radius: 5px;
+    border: 3px solid #fff;
+  }
+
+  .user-edit .col-4 .sidebar .user-info .user-avatar img {
+    display: block;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .user-edit .col-4 .sidebar .user-info .user-name {
+    height: 34px;
+    color: #5c7390;
+    position: relative;
+    margin-left: 10px;
+  }
+
+  .user-edit .col-4 .sidebar .card-body {
+    margin-top: 15px;
+    padding: 0 0 0 20px;
+  }
+
+  .user-edit .col-4 .sidebar .menu-modify {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
+  .user-edit .col-4 .sidebar .menu-modify:hover {
+    background-color: #f0faff;
+    color: #2d8cf0;
+  }
 }
 
 .offset-md-2 {

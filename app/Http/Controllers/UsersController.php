@@ -29,6 +29,12 @@ class UsersController extends Controller
         return view('users.edit', compact('user'));
     }
 
+    public function passwordEdit(User $user)
+    {
+        $this->authorize('update', $user);
+        return view('users.passswordEdit', compact('user'));
+    }
+
     // 编辑资料逻辑
     public function update(User $user, Request $request, ImageUploadHandler $uploader)
     {
