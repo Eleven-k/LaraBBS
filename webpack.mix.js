@@ -14,4 +14,6 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
   .sass('resources/sass/app.scss', 'public/css')
   .sass('resources/sass/before.scss', 'public/css')
-  .sass('resources/sass/after.scss', 'public/css').version();
+  .sass('resources/sass/after.scss', 'public/css')
+  .copyDirectory('resources/editor/js', 'public/js')
+  .copyDirectory('resources/editor/css', 'public/css').version();

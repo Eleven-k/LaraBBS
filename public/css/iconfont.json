@@ -6,39 +6,25 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "731513",
-      "name": "图片",
-      "font_class": "tupian",
-      "unicode": "e669",
-      "unicode_decimal": 58985
+      "icon_id": "2783598",
+      "name": "日历",
+      "font_class": "rili1",
+      "unicode": "e638",
+      "unicode_decimal": 58936
     },
     {
-      "icon_id": "5330172",
-      "name": "铅笔",
-      "font_class": "qianbi",
-      "unicode": "e768",
-      "unicode_decimal": 59240
+      "icon_id": "1494660",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e608",
+      "unicode_decimal": 58888
     },
     {
-      "icon_id": "9882719",
-      "name": "尖括号",
-      "font_class": "changyongicon-",
-      "unicode": "e600",
-      "unicode_decimal": 58880
-    },
-    {
-      "icon_id": "11499540",
-      "name": "置顶",
-      "font_class": "zhiding",
-      "unicode": "e62c",
-      "unicode_decimal": 58924
-    },
-    {
-      "icon_id": "14562117",
-      "name": "桃心",
-      "font_class": "taoxin",
-      "unicode": "e601",
-      "unicode_decimal": 58881
+      "icon_id": "5121520",
+      "name": "文件夹",
+      "font_class": "wenjianjia",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
     }
   ]
 }

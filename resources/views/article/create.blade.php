@@ -47,29 +47,6 @@
                                     <textarea name="content" class="form-control" id="editor" rows="6" placeholder="请填入至少三个字符的内容。" autofocus>{{ old('content') }}</textarea>
                                 </div>
 
-                                <div class="type-warpper">
-                                    <!-- <div class="type-btn">
-                                        <div class="text-btn"></div>
-                                        <div>段落</div>
-                                    </div>
-                                    <div class="type-btn img-btn">
-                                        <div class="ivu-upload">
-                                            <div class="ivu-upload ivu-upload-select"><input type="file" class="ivu-upload-input">
-                                                <div class="text-btn"></div>
-                                                <div>图片</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="type-btn video-btn">
-                                        <div data-v-2257a61a="" class="uploader">
-                                            <div class="uploader-unsupport" style="display: none;">
-                                            </div> <label class="uploader-btn text-btn">
-                                                <input type="file" accept="video/mp4" style="visibility: hidden; position: absolute; width: 1px; height: 1px;">
-                                            </label>
-                                        </div>
-                                        <div>视频</div>
-                                    </div> -->
-                                </div>
 
                             </form>
                         </div>
@@ -80,4 +57,26 @@
         </div>
     </div>
 </div>
+@stop
+
+@section('styles')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}" />
+@stop
+
+@section('scripts')
+<script type="text/javascript" src=" {{ asset('js/jquery.min.js') }} "></script>
+<script type="text/javascript" src=" {{ asset('js/module.js') }} "></script>
+<script type="text/javascript" src=" {{ asset('js/hotkeys.js') }} "></script>
+<script type="text/javascript" src=" {{ asset('js/uploader.js') }} "></script>
+<script type="text/javascript" src=" {{ asset('js/simditor.js') }} "></script>
+<script>
+        toolbar = [ 'title', 'bold', 'italic', 'underline', 'strikethrough',
+            'color', 'fontScale', 'ol', 'ul', 'blockquote', 'code', 'table',
+            'link', 'image', 'hr',  'indent', 'outdent','alignment' ];
+        var editor = new Simditor({
+            textarea : $('#editor'),
+            toolbar : toolbar,  //工具栏
+            pasteImage: true,
+        });
+    </script>
 @stop

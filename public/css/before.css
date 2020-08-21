@@ -682,35 +682,15 @@ img {
     color: #c5c8ce;
   }
 
-  .article-create .compose-wrap .article .form-group textarea {
-    height: 125px;
-    min-height: 125px;
-    max-height: 230px;
-    font-size: 14px;
-    border-radius: 0;
-    border: none;
-    resize: none;
-    padding: 10px;
+  .article-create .compose-wrap .article .form-group .simditor-wrapper {
     background-color: #fafafa;
+    height: 290px;
+    min-height: 290px;
+    max-height: 290px;
   }
 
-  .article-create .compose-wrap .article .form-group textarea::-webkit-input-placeholder {
-    color: #c5c8ce;
-  }
-
-  .article-create .compose-wrap .article .form-group textarea::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: #c5c8ce;
-  }
-
-  .article-create .compose-wrap .article .form-group textarea:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: #c5c8ce;
-  }
-
-  .article-create .compose-wrap .article .form-group textarea:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #c5c8ce;
+  .article-create .compose-wrap .article .form-group .simditor-wrapper .simditor-placeholder {
+    font-size: 14px;
   }
 
   .article-create .compose-wrap .article .form-group select {
@@ -741,6 +721,31 @@ img {
     font-size: 14px;
     background-color: #2d8cf0;
     border-color: #2d8cf0;
+  }
+
+  .article-create .compose-wrap .article .type-warpper .type-btn {
+    width: 33.3333%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    float: left;
+    background-color: #f7f9fb;
+    font-size: 15px;
+    color: #77838f;
+  }
+
+  .article-create .compose-wrap .article .type-warpper .type-btn:hover {
+    background-color: #f0f7ff;
+  }
+
+  .article-create .compose-wrap .article .type-warpper .img-btn {
+    line-height: 20px;
+    padding-top: 32px;
+  }
+
+  .article-create .compose-wrap .article .type-warpper .img-btn input {
+    width: 80px;
+    line-height: 12px;
   }
 }
 

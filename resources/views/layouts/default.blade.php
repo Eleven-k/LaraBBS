@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/iconfont.css">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}"> 
     <link rel="stylesheet" href="{{ mix('css/before.css') }}">
+    @yield('styles')
 </head>
 
 <body style="background-color: #f5f7f9;">
@@ -31,6 +32,7 @@
 
 
     <script src="{{ mix('js/app.js') }}"></script>
+    @yield('scripts')
 
 </body>
 

@@ -40,13 +40,11 @@ class UsersController extends Controller
     {
         $this->authorize('update', $user);
         $this->validate($request, [
-            'name' => 'nullable|max:50',
             'introduction' => 'nullable',
             'avatar' => 'mimes:jpeg,bmp,png,gif|dimensions:min_width=208,min_height=208'
         ]);
 
         $data = [];
-        $data['name'] = $request->name;
         $data['introduction'] = $request->introduction;
         if ($request->avatar) {
             $result = $uploader->save($request->avatar, 'avatars', $user->id, 416);
