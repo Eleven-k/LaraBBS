@@ -18,8 +18,11 @@ class UsersController extends Controller
     // 个人页面
     public function show(User $user)
     {
+        $articles = $user->articles()
+        ->orderBy('created_at', 'desc')
+        ->paginate(10);
         $user = Auth::user();
-        return view('users.show', compact('user'));
+        return view('users.show', compact('user','articles'));
     }
 
     // 编辑资料页面

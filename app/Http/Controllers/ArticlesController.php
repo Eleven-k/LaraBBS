@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Handlers\ImageUploadHandler;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Category;
@@ -24,16 +25,35 @@ class ArticlesController extends Controller
 
     // 创建文章方法
     public function store(Request $request, Article $article)
-    { 
-        $this->validate($request,[
-            'title'=>'required|min:3|max:30',
-            'content'=>'required|min:3',
+    {
+        $this->validate($request, [
+            'title' => 'required|min:3|max:30',
+            'content' => 'required|min:3',
         ]);
-    
+
         $article->fill($request->all());
-        $article->user_id=Auth::id();
+        $article->user_id = Auth::id();
         $article->save();
-       
-        return redirect()->route('index',$article->id)->with('success','文章创建成功！');
+
+        return redirect()->route('index', $article->id)->with('success', '文章创建成功！');
+    }
+
+    // 创建文章图片上传
+    public function uploadImage(Request $request, ImageUploadHandler $uploader)
+    {
+        $data = [
+            'success' => false,
+            'msg'    => '上传失败!',
+            'file_path' => ''
+        ];
+        if ($file = $request->upload_file) {
+            $result = $uploader->save($file, 'article', \Auth::id(), 1024);
+            if ($result) {
+                $data['file_path'] = $result['path'];
+                $data['msg'] = "上传成功！";
+                $data['success'] = true;
+            }
+        }
+        return $data;
     }
 }

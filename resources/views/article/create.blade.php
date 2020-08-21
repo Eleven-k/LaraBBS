@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea name="content" class="form-control" id="editor" rows="6" placeholder="请填入至少三个字符的内容。" autofocus>{{ old('content') }}</textarea>
+                                    <textarea name="content" class="form-control" id="editor" rows="12" placeholder="请填入至少三个字符的内容。" autofocus>{{ old('content') }}</textarea>
                                 </div>
 
 
@@ -70,13 +70,23 @@
 <script type="text/javascript" src=" {{ asset('js/uploader.js') }} "></script>
 <script type="text/javascript" src=" {{ asset('js/simditor.js') }} "></script>
 <script>
-        toolbar = [ 'title', 'bold', 'italic', 'underline', 'strikethrough',
-            'color', 'fontScale', 'ol', 'ul', 'blockquote', 'code', 'table',
-            'link', 'image', 'hr',  'indent', 'outdent','alignment' ];
-        var editor = new Simditor({
-            textarea : $('#editor'),
-            toolbar : toolbar,  //工具栏
-            pasteImage: true,
-        });
-    </script>
+    toolbar = ['title', 'bold', 'italic', 'underline', 'strikethrough',
+        'color', 'fontScale', 'ol', 'ul', 'blockquote', 'code', 'table',
+        'link', 'image', 'hr', 'indent', 'outdent', 'alignment'
+    ];
+    var editor = new Simditor({
+        textarea: $('#editor'),
+        toolbar: toolbar, //工具栏
+        pasteImage: true,
+        upload: {
+            url: '{{ route('articles.upload_image') }}',
+            params: {
+                _token: '{{ csrf_token() }}'
+            },
+            fileKey: 'upload_file',
+            connectionCount: 10,
+            leaveConfirm: '文件上传中，关闭此页面将取消上传。'
+        },
+    });
+</script>
 @stop

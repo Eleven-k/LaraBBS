@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticlesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,3 +53,6 @@ Route::patch('/articles/{article}', 'ArticlesController@update')->name('articles
 
 // 删除文章方法
 Route::delete('/articles/{article}', 'ArticlesController@destroy')->name('articles.destroy');
+
+// 文章图片上传
+Route::post('upload_image', 'ArticlesController@uploadImage')->name('articles.upload_image');

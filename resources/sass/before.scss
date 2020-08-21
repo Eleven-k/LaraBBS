@@ -17,10 +17,6 @@ ul {
   padding: 0;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {}
@@ -218,17 +214,19 @@ img {
 
               .post-item-userinfo {
                 margin: 25px 20px;
-                position: relative;
+                float: left;
 
                 img {
-                  width: 214px;
+                  width: 50px;
                   height: 50px;
                   border-radius: 50%
                 }
               }
 
               .post-item-content {
-                padding: 25px 20px 25px 0;
+                padding: 25px 20px 25px 10px;
+                width: 100%;
+                float: initial;
 
                 .nickname {
                   color: #14171a;
@@ -734,13 +732,17 @@ img {
             /* Internet Explorer 10-11 */
             color: #c5c8ce;
           }
-          .simditor-wrapper{
+
+          .simditor-wrapper {
             background-color: #fafafa;
-            height: 290px;
-            min-height: 290px;
-            max-height: 290px;
-            .simditor-placeholder{
-            font-size: 14px;
+
+            .simditor-placeholder {
+              font-size: 14px;
+            }
+
+            img {
+              max-width: 100%;
+              height: auto;
             }
           }
 
@@ -766,7 +768,7 @@ img {
           margin: 19px 0 13px;
 
           button {
-            height: 32px;
+            height: 32px;.
             width: 60px;
             line-height: 18px;
             font-size: 14px;
@@ -785,7 +787,8 @@ img {
             background-color: #f7f9fb;
             font-size: 15px;
             color: #77838f;
-            &:hover{
+
+            &:hover {
               background-color: #f0f7ff;
             }
           }
@@ -793,6 +796,7 @@ img {
           .img-btn {
             line-height: 20px;
             padding-top: 32px;
+
             input {
               width: 80px;
               line-height: 12px;

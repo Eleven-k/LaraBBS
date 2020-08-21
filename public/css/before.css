@@ -19,11 +19,6 @@ ul {
   padding: 0;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 @media (min-width: 1200px) {
   .nav {
     height: 60px;
@@ -200,17 +195,19 @@ img {
 
   .content .container .col-6 .col-8 .posts-container .post-item .post-item-userinfo {
     margin: 25px 20px;
-    position: relative;
+    float: left;
   }
 
   .content .container .col-6 .col-8 .posts-container .post-item .post-item-userinfo img {
-    width: 214px;
+    width: 50px;
     height: 50px;
     border-radius: 50%;
   }
 
   .content .container .col-6 .col-8 .posts-container .post-item .post-item-content {
-    padding: 25px 20px 25px 0;
+    padding: 25px 20px 25px 10px;
+    width: 100%;
+    float: initial;
   }
 
   .content .container .col-6 .col-8 .posts-container .post-item .post-item-content .nickname {
@@ -684,13 +681,15 @@ img {
 
   .article-create .compose-wrap .article .form-group .simditor-wrapper {
     background-color: #fafafa;
-    height: 290px;
-    min-height: 290px;
-    max-height: 290px;
   }
 
   .article-create .compose-wrap .article .form-group .simditor-wrapper .simditor-placeholder {
     font-size: 14px;
+  }
+
+  .article-create .compose-wrap .article .form-group .simditor-wrapper img {
+    max-width: 100%;
+    height: auto;
   }
 
   .article-create .compose-wrap .article .form-group select {
