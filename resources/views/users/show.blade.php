@@ -18,14 +18,14 @@
 
 
                                     <hr>
-                                    @if (count($articles))
+                                    @if (count($articles)>0)
 
                                     @foreach ($articles as $article)
 
                                     <div class="post-item">
 
                                         <div class="post-item-userinfo">
-                                            <a href="{{ route('users.show',Auth::id()) }}" class="">
+                                            <a href="{{ route('users.show',$article->id) }}" class="">
                                                 <div class="post-item-userinfo-avatar">
                                                     <img src="{{ $user->avatar }}" alt="" class="post-item-userinfo-avatar-img">
                                                 </div>
@@ -34,7 +34,7 @@
 
                                         <div class="post-item-content">
                                             <div class="post-item-content-header">
-                                                <a href="{{ route('users.show',Auth::id()) }}" class="">
+                                                <a href="{{ route('users.show',$article->id) }}" class="">
                                                     <span class="nickname">{{ $user->name }}</span>
                                                 </a>
                                                 <span class="time"> {{ $article->created_at }}</span>
@@ -48,7 +48,7 @@
                                             </div>
 
                                         </div>
-                                        
+
                                         <div class="post-item-praise">
                                             <div class="praise-wrap">
                                                 <div class="praise-bottom">
@@ -91,15 +91,43 @@
 
                                 <div class="sidebar">
 
+                                    <div class="statistics"><a href="{{ route('users.followings', $user->id) }}">
+                                            <div class="statistic" style="border-right: 1px solid #e7eaf3;">
+                                                <div class="num-board">关注了</div>
+                                                <div class="unm"> {{ count($user->followings) }}</div>
+                                            </div>
+                                        </a>
+                                        <a href="{{ route('users.followers', $user->id) }}">
+                                            <div class="statistic">
+                                                <div class="num-board">关注者</div>
+                                                <div class="unm">{{ count($user->followers) }}</div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="sidebar">
+
                                     <div class="statistics">
-                                        <div class="statistic" style="border-right: 1px solid #e7eaf3;">
-                                            <div class="num-board">关注了</div>
-                                            <div class="unm">0</div>
+                                        @can('follow', $user)
+                                        <div class="text-center mt-2 mb-4">
+                                            @if (Auth::user()->isFollowing($user->id))
+                                            <form action="{{ route('followers.destroy', $user->id) }}" method="post">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" class="btn btn-sm btn-outline-primary">取消关注</button>
+                                            </form>
+                                            @else
+                                            <form action="{{ route('followers.store', $user->id) }}" method="post">
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-sm btn-primary">关注</button>
+                                            </form>
+                                            @endif
                                         </div>
-                                        <div class="statistic">
-                                            <div class="num-board">关注者</div>
-                                            <div class="unm">0</div>
-                                        </div>
+                                        @endcan
+
                                     </div>
 
                                 </div>

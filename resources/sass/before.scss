@@ -291,7 +291,7 @@ ul {
               }
             }
 
-           
+
 
           }
         }
@@ -524,6 +524,15 @@ ul {
           }
         }
 
+      }
+
+      .text-center {
+        height: 50px;
+        padding-top: 17px;
+
+        button {
+          width: 170px;
+        }
       }
     }
   }
@@ -817,10 +826,49 @@ ul {
       color: #77838f;
     }
 
-    .show-editor{
+    .show-editor {
       right: 21px;
       bottom: -77px;
       position: relative;
+    }
+
+  }
+
+  .follow-title{
+    margin: 7px 0 15px;
+    border-bottom: 1px solid #efefef;
+    height: 35px;
+    line-height: 27px;
+    padding-left: 15px;
+    .follow-title-s{
+      height: 60px;
+    }
+  }
+
+  .offset-md-2 {
+    padding: 20px 20px 37px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+
+    .post-item{
+      border-bottom: none !important;
+      .article-item {
+        display: unset !important;
+        &:hover{
+          background-color: #ffffff;
+        }
+  
+        .follow-pages {
+          width: 12.65%;
+          float: left;
+          margin: 0 5px;
+          a{
+            font-size: 12px;
+            text-align: center;
+          }
+        }
+      }
     }
 
   }

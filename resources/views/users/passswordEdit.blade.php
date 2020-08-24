@@ -45,14 +45,6 @@
 
                                                 @include('shared._errors')
                                                 <div class="passwordEdit">
-                                                    <div class="ivu-information">
-                                                        <label for="ivu-form-item-label">当前密码</label>
-                                                        <div class="ivu-input-type-text">
-                                                            <div class="ivu-input-box">
-                                                                <input class="form-control" type="password" name="password" placeholder="请输入当前密码" id="name-field" value="{{ old('password') }}" style="border: 1px solid #f7f9fb; height: 32px;">
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
                                                     <div class="ivu-information">
                                                         <label for="ivu-form-item-label">新密码</label>

@@ -26,7 +26,7 @@
 
                                     @if (isset($feed_items))
                                         @foreach ($feed_items as $article)
-                                        @include('article._article', ['user => $user->avatar'])
+                                        @include('article._article', ['article' => $article])
                                         @endforeach
                                     @else
                                     <div class="card-body-sky" style="float: none;">

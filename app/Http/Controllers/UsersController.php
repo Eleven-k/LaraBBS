@@ -18,10 +18,10 @@ class UsersController extends Controller
     // 个人页面
     public function show(User $user)
     {
+        
         $articles = $user->articles()
         ->orderBy('created_at', 'desc')
         ->paginate(10);
-        $user = Auth::user();
         return view('users.show', compact('user','articles'));
     }
 
@@ -74,5 +74,19 @@ class UsersController extends Controller
         $user->update($data);
         session()->flash('success', '个人资料更新成功！');
         return redirect()->route('users.show', $user);
+    }
+
+    // 用户关注功能
+    public function followings(User $user)
+    {
+        $users = $user->followings()->paginate(30);
+        $title = $user->name . '关注的人';
+        return view('users.show_follow', compact('users', 'title'));
+    }
+    public function followers(User $user)
+    {
+        $users = $user->followers()->paginate(30);
+        $title = $user->name . '的关注者';
+        return view('users.show_follow', compact('users', 'title'));
     }
 }
