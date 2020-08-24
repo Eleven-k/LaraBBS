@@ -291,11 +291,7 @@ ul {
               }
             }
 
-             .eeee666666{
-               width: 132px;
-               position: relative;
-               top: 30px;
-            }
+           
 
           }
         }
@@ -809,6 +805,24 @@ ul {
         }
       }
     }
+  }
+
+  .article-show {
+
+    .post-item-praise {
+      padding-top: 28px;
+      width: 200px !important;
+      max-width: 125px;
+      font-size: 12px;
+      color: #77838f;
+    }
+
+    .show-editor{
+      right: 21px;
+      bottom: -77px;
+      position: relative;
+    }
+
   }
 
 }

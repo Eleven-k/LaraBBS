@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@index')->name('index');
+Route::get('/article/{article}','ArticlesController@show')->name('show');
 
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -56,3 +57,6 @@ Route::delete('/articles/{article}', 'ArticlesController@destroy')->name('articl
 
 // 文章图片上传
 Route::post('upload_image', 'ArticlesController@uploadImage')->name('articles.upload_image');
+
+// 判断进入后台
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');

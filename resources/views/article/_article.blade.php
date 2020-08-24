@@ -18,7 +18,7 @@
             <span class="iconfont icon-tupian"></span>
         </div>
         <div class="post-item-content-text">
-            <a href="#">
+            <a href="{{route('show',$article->id)}}">
                 <p>{!! $article->content !!}
             </a>
         </div>

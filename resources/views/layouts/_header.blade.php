@@ -17,12 +17,21 @@
                                 <a class="btn btn-primary create" href="register" role="button">注册</a>
                                 <a class="btn btn-primary login" href="login" role="button">登录</a>
                                 @else
+
+
+
+                
+
+
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle" width="30px" height="30px" style="border-radius: 50%;">
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @can('manage_contents')
+                                        <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}">后台管理</a>
+                                        @endcan
                                         <a class="dropdown-item" href="{{route('users.show',Auth::id())}}">我的主页</a>
                                         <a class="dropdown-item" href="{{route('users.edit',Auth::id())}}">设置中心</a>
                                         <div class="dropdown-divider"></div>

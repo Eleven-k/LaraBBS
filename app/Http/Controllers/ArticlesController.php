@@ -84,4 +84,11 @@ class ArticlesController extends Controller
         return redirect()->back();
     }
 
+    // 文章详情显示
+    public function show(Article $article)
+    {
+        $user=Auth::user();
+        return view('article.show', compact('article','user'));
+    }
+
 }

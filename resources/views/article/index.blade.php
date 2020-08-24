@@ -29,7 +29,10 @@
                                         @include('article._article', ['user => $user->avatar'])
                                         @endforeach
                                     @else
-                                    <p>没有数据！</p>
+                                    <div class="card-body-sky" style="float: none;">
+                                        <img src="images/2452e39.png" alt="">
+                                        <div class="sky">暂无数据 ~_~</div>
+                                    </div>
                                     @endif
 
 

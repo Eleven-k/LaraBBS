@@ -40,7 +40,7 @@
                                                 <span class="time"> {{ $article->created_at }}</span>
                                             </div>
                                             <div class="post-item-content-text">
-                                                <a href="#">
+                                                <a href="{{route('show',$article->id)}}">
                                                     <p>
                                                         {{ $article->title }}
                                                     </p>
@@ -48,17 +48,7 @@
                                             </div>
 
                                         </div>
-                                        <span class="eeee666666">
-                                            <form action="{{ route('articles.destroy', $article->id) }}" method="POST" onsubmit="return confirm('您确定要删除本条微博吗？');">
-                                                {{ csrf_field() }}
-                                                {{ method_field('DELETE') }}
-                                                <a href="{{route('articles.edit',$article->id)}}" style="font-size: 14px;top: 11px;/* padding-top: 41px; */position: absolute;right: 44px;">编辑</a>
-                                                <span>
-                                                    <button type="submit" class="btn btn-link" style="color: red;font-size:13px;position: absolute;top: 5px;right: -5px;">删除</button>
-                                                </span>
-                                                <!-- <button type="submit" class="btn btn-sm btn-danger">删除</button> -->
-                                            </form>
-                                        </span>
+                                        
                                         <div class="post-item-praise">
                                             <div class="praise-wrap">
                                                 <div class="praise-bottom">
