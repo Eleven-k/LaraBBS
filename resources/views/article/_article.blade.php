@@ -3,7 +3,7 @@
     <div class="post-item-userinfo">
         <a href="/post/HZ018V5E" class="">
             <div class="post-item-userinfo-avatar">
-                <img src="{{ Auth::user()->avatar }}" alt="" class="post-item-userinfo-avatar-img">
+                <img src="{{ $user->avatar }}" alt="" class="post-item-userinfo-avatar-img">
             </div>
         </a>
     </div>
@@ -11,7 +11,7 @@
     <div class="post-item-content">
         <div class="post-item-content-header">
             <a href="#" class="">
-                <span class="nickname">ROC</span>
+                <span class="nickname">{{ $user->name }}</span>
             </a>
             <span class="time">{{ $article->created_at }}</span>
             <span class="iconfont icon-zhiding"></span>

@@ -26,7 +26,7 @@
 
                                     @if (isset($feed_items))
                                         @foreach ($feed_items as $article)
-                                        @include('article._article', ['user' => $article->user_id])
+                                        @include('article._article', ['user => $user->avatar'])
                                         @endforeach
                                     @else
                                     <p>没有数据！</p>

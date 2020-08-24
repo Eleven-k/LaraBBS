@@ -270,6 +270,12 @@ ul {
     padding-right: 10px;
   }
 
+  .content .container .col-6 .col-8 .posts-container .eeee666666 {
+    width: 132px;
+    position: relative;
+    top: 30px;
+  }
+
   .content .container .col-6 .col-4 {
     padding: 0;
   }

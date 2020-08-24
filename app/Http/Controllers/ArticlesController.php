@@ -56,4 +56,32 @@ class ArticlesController extends Controller
         }
         return $data;
     }
+
+    // 编辑文章页面
+    public function edit(Article $article)
+    {
+        $categories = Category::all();
+        return view('article.edit', compact('article','categories'));
+    }
+
+    // 编辑文章方法
+    public function update(Article $article, Request $request)
+    {
+        $article->update([
+            'title' => $request->title,
+            'content' => $request->content,
+        ]);
+        session()->flash('success', '文章更新成功！');
+        return redirect()->route('users.show', $article->id);
+    }
+
+    // 删除文章
+    public function destroy(Article $article)
+    {
+        // $this->authorize('destroy', $article);
+        Article::destroy($article->id);
+        session()->flash('success', '文章已被成功删除！');
+        return redirect()->back();
+    }
+
 }
