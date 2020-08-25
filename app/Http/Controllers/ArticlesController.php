@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Category;
 use Auth;
+use App\Models\User;
 
 class ArticlesController extends Controller
 {
@@ -60,6 +61,7 @@ class ArticlesController extends Controller
     // 编辑文章页面
     public function edit(Article $article)
     {
+        // $this->authorize('update', $article);
         $categories = Category::all();
         return view('article.edit', compact('article','categories'));
     }
@@ -67,27 +69,23 @@ class ArticlesController extends Controller
     // 编辑文章方法
     public function update(Article $article, Request $request)
     {
-        $article->update([
-            'title' => $request->title,
-            'content' => $request->content,
-        ]);
-        session()->flash('success', '文章更新成功！');
-        return redirect()->route('users.show', $article->id);
+        // $this->authorize('update', $article);
+        $article->update($request->all());
+        return redirect()->route('index', $article->id)->with('success', '更新成功！');
     }
 
     // 删除文章
     public function destroy(Article $article)
     {
-        // $this->authorize('destroy', $article);
-        Article::destroy($article->id);
-        session()->flash('success', '文章已被成功删除！');
+        $this->authorize('destroy', $article);
+        $article->delete();
+        session()->flash('success', '微博已被成功删除！');
         return redirect()->back();
     }
 
     // 文章详情显示
-    public function show(Article $article)
+    public function show(Article $article,User $user)
     {
-        $user=Auth::user();
         return view('article.show', compact('article','user'));
     }
 
