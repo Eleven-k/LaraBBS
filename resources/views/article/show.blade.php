@@ -19,7 +19,7 @@
                                             <div class="post-item-userinfo">
                                                 <a href="/post/HZ018V5E" class="">
                                                     <div class="post-item-userinfo-avatar">
-                                                        <img src="{{ $user->avatar }}" alt="" class="post-item-userinfo-avatar-img">
+                                                        <img src="{{ $article->user->avatar }}" alt="" class="post-item-userinfo-avatar-img">
                                                     </div>
                                                 </a>
                                             </div>
@@ -27,14 +27,14 @@
                                             <div class="post-item-content">
                                                 <div class="post-item-content-header">
                                                     <a href="#" class="">
-                                                        <span class="nickname">{{ $user->name }}</span>
+                                                        <span class="nickname">{{ $article->user->name }}</span>
                                                     </a>
                                                     
                                                 </div>
                                                 <div class="post-item-content-text">
-                                                    <a href="{{route('show',$article->id)}}">
+                                                   <h2>{!! $article->title !!}</h2>
                                                         <p>{!! $article->content !!}
-                                                    </a>
+                                                 
                                                 </div>
                                             </div>
 
@@ -42,6 +42,7 @@
                                                 <span class="time">{{ $article->created_at }}</span>
                                             </div>
 
+                                            
                                             <div class="show-editor">
                                             <form action="{{ route('articles.destroy', $article->id) }}" method="POST" onsubmit="return confirm('您确定要删除本条微博吗？');">
                                                 {{ csrf_field() }}
@@ -53,6 +54,7 @@
                                                 <!-- <button type="submit" class="btn btn-sm btn-danger">删除</button> -->
                                             </form>
                                             </div>
+                                         
                                         </div>
                                     </div>
 

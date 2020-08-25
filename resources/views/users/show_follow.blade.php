@@ -30,9 +30,9 @@
                                                 <a href="{{ route('users.show', $user) }}">
                                                 <div class="follow-pages">
                                                     <img class="mr-3" src="{{ $user->avatar }}" alt="{{ $user->name }}">
-                                                    <a href="{{ route('users.show', $user) }}">
+                                                   <p>
                                                         {{ $user->name }}
-                                                    </a>
+                                                        </p>
                                                 </div>
                                                 </a>
 

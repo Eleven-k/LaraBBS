@@ -201,6 +201,7 @@ ul {
               width: 100%;
               border-bottom: 1px solid #efefef;
               display: flex;
+              position: relative;
 
               img {
                 width: 100%;
@@ -827,43 +828,51 @@ ul {
     }
 
     .show-editor {
-      right: 21px;
-      bottom: -77px;
-      position: relative;
+      right: 17px;
+    bottom: 50px;
+    position: absolute;
     }
 
   }
 
-  .follow-title{
+  .follow-title {
     margin: 7px 0 15px;
     border-bottom: 1px solid #efefef;
     height: 35px;
     line-height: 27px;
     padding-left: 15px;
-    .follow-title-s{
+
+    .follow-title-s {
       height: 60px;
     }
   }
 
   .offset-md-2 {
-    padding: 20px 20px 37px;
+    padding: 20px 20px;
     width: 100%;
     max-width: 100%;
     margin: 0;
 
-    .post-item{
+    .post-item {
       border-bottom: none !important;
+
       .article-item {
         display: unset !important;
-        &:hover{
+
+        &:hover {
           background-color: #ffffff;
         }
-  
+
         .follow-pages {
           width: 12.65%;
           float: left;
           margin: 0 5px;
-          a{
+
+
+          p {
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+            white-space: nowrap; 
             font-size: 12px;
             text-align: center;
           }

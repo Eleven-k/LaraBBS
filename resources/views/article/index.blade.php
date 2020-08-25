@@ -14,8 +14,8 @@
                                 <div class="posts-container">
                                     <div class="posts-addons">
                                         <div class="posts-filter-wrap">
-                                            <div class="filter-item"><a href="#">最新发表</a></div>
-                                            <div class="filter-item"><a href="#">最后回复</a></div>
+                                            <div class="filter-item"><a href="{{ Request::url() }}">最新发表</a></div>
+                                            <div class="filter-item"><a href="{{ Request::url() }}">最后回复</a></div>
                                             <div class="filter-item"><a href="#">最热评论</a></div>
                                             <div class="filter-item"><a href="#">精华内容</a></div>
                                         </div>
@@ -30,7 +30,7 @@
                                         @endforeach
                                     @else
                                     <div class="card-body-sky" style="float: none;">
-                                        <img src="images/2452e39.png" alt="">
+                                        <img src="/images/2452e39.png" alt="">
                                         <div class="sky">暂无数据 ~_~</div>
                                     </div>
                                     @endif
@@ -42,50 +42,50 @@
                             <div class="col-4">
                                 <div class="sidebar">
                                     <div class="main-list">
-                                        <a href="#">
+                                        <a href="{{ route('index') }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>全部主题</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 1) }}">
 
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>技术交流</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 2) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>天下杂谈</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 3) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>心情分享</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 4) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>灌水专区</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 5) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>商业合作</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 6) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>开源项目</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 7) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>前端和视觉设计</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 8) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>个人创业</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 9) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>极客那些事</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 10) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>科技智趣生活</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 11) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>爱旅游爱摄影</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 12) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>汽车之家</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 13) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>极简生活</div>
                                         </a>
-                                        <a href="#">
+                                        <a href="{{ route('categories.show', 14) }}">
                                             <div class="group-item"><span class="iconfont icon-changyongicon-"></span>产品经理</div>
                                         </a>
                                     </div>

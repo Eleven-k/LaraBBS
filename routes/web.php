@@ -58,6 +58,9 @@ Route::delete('/articles/{article}', 'ArticlesController@destroy')->name('articl
 // 文章图片上传
 Route::post('upload_image', 'ArticlesController@uploadImage')->name('articles.upload_image');
 
+// 文章分类列表
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
 // 判断进入后台
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
 

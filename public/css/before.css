@@ -181,6 +181,7 @@ ul {
     width: 100%;
     border-bottom: 1px solid #efefef;
     display: flex;
+    position: relative;
   }
 
   .content .container .col-6 .col-8 .posts-container .post-item img {
@@ -765,9 +766,9 @@ ul {
   }
 
   .article-show .show-editor {
-    right: 21px;
-    bottom: -77px;
-    position: relative;
+    right: 17px;
+    bottom: 50px;
+    position: absolute;
   }
 
   .follow-title {
@@ -783,7 +784,7 @@ ul {
   }
 
   .offset-md-2 {
-    padding: 20px 20px 37px;
+    padding: 20px 20px;
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -807,7 +808,10 @@ ul {
     margin: 0 5px;
   }
 
-  .offset-md-2 .post-item .article-item .follow-pages a {
+  .offset-md-2 .post-item .article-item .follow-pages p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 12px;
     text-align: center;
   }
