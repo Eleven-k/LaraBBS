@@ -22,7 +22,7 @@
 
                         <div class="article">
                             <form action="{{ route('articles.update',Auth::id()) }}" method="POST" accept-charset="UTF-8">
-                            {{ method_field('PATCH') }}
+                                {{ method_field('PATCH') }}
                                 @include('shared._errors')
                                 {{ csrf_field() }}
 
@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea name="content" class="form-control" id="editor" rows="12" placeholder="请填入至少三个字符的内容。" autofocus>{{ $article->title }}</textarea>
+                                    <textarea name="content" class="form-control" id="editor" rows="12" placeholder="请填入至少三个字符的内容。" autofocus>{{ $article->content }}</textarea>
                                 </div>
 
 
@@ -79,7 +79,8 @@
         toolbar: toolbar, //工具栏
         pasteImage: true,
         upload: {
-            url: '{{ route('articles.upload_image') }}',
+            url: '{{ route('
+            articles.upload_image ') }}',
             params: {
                 _token: '{{ csrf_token() }}'
             },

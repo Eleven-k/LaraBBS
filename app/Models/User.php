@@ -45,6 +45,11 @@ class User extends Authenticatable implements MustVerifyEmailContract
         return $this->hasMany(Article::class);
     }
 
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
     public function setPasswordAttribute($value)
     {
         if (strlen($value) != 60) {

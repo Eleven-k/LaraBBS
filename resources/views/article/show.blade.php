@@ -29,12 +29,12 @@
                                                     <a href="#" class="">
                                                         <span class="nickname">{{ $article->user->name }}</span>
                                                     </a>
-                                                    
+
                                                 </div>
                                                 <div class="post-item-content-text">
-                                                   <h2>{!! $article->title !!}</h2>
-                                                        <p>{!! $article->content !!}
-                                                 
+                                                    <h2>{!! $article->title !!}</h2>
+                                                    <p>{!! $article->content !!}
+
                                                 </div>
                                             </div>
 
@@ -42,20 +42,43 @@
                                                 <span class="time">{{ $article->created_at }}</span>
                                             </div>
 
-                                            
+
                                             <div class="show-editor">
-                                            <form action="{{ route('articles.destroy', $article->id) }}" method="POST" onsubmit="return confirm('您确定要删除本条微博吗？');">
-                                                {{ csrf_field() }}
-                                                {{ method_field('DELETE') }}
-                                                <a href="{{route('articles.edit',$article->id)}}" style="font-size: 14px;top: 11px;/* padding-top: 41px; */position: absolute;right: 44px; width:30px">编辑</a>
-                                                <span>
-                                                    <button type="submit" class="btn btn-link" style="color: red;font-size:13px;position: absolute;top: 5px;right: -5px; width:54px">删除</button>
-                                                </span>
-                                                <!-- <button type="submit" class="btn btn-sm btn-danger">删除</button> -->
-                                            </form>
+                                                <form action="{{ route('articles.destroy', $article->id) }}" method="POST" onsubmit="return confirm('您确定要删除本条微博吗？');">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+                                                    <a href="{{route('articles.edit',$article->id)}}" style="font-size: 14px;top: 11px;/* padding-top: 41px; */position: absolute;right: 44px; width:30px">编辑</a>
+                                                    <span>
+                                                        <button type="submit" class="btn btn-link" style="color: red;font-size:13px;position: absolute;top: 5px;right: -5px; width:54px">删除</button>
+                                                    </span>
+                                                </form>
                                             </div>
-                                         
+
                                         </div>
+
+                                        <div class="post-item-comments">
+                                            <div class="item-comments">
+
+                                                <div class="post-item-userinfo-comments">
+                                                    <img src="/images/comments.png" alt="" class="post-item-userinfo-avatar-img">
+                                                </div>
+
+
+                                            </div>
+
+                                            <form action="{{ route('replies.store') }}" method="POST" accept-charset="UTF-8">
+                                                {{ csrf_field() }}
+                                                <div class="ivu-information">
+                                                    <div class="ivu-input-box">
+                                                        <textarea name="content" id="introduction-field" class="form-control" rows="5" placeholder="快来发表评论吧"></textarea>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-share mr-1"></i> 回复</button>
+                                            </form>
+
+                                        </div>
+                                        @include('article._reply')
+
                                     </div>
 
                                 </div>

@@ -829,8 +829,56 @@ ul {
 
     .show-editor {
       right: 17px;
-    bottom: 50px;
-    position: absolute;
+      bottom: 50px;
+      position: absolute;
+    }
+
+    .post-item-comments {
+      width: 100%;
+      display: flex;
+      position: relative;
+      background-color: #f3f4ff;
+
+      .item-comments {
+        margin: 20px 10px 0 20px;
+        float: left;
+
+        .post-item-userinfo-comments {
+          width: 40px;
+          height: 40px;
+          img{
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+          }
+        }
+
+      }
+
+      form {
+        width: 100%;
+        margin: 20px 20px 20px 0;
+
+        .btn-sm {
+          margin-top: 10px;
+          position: relative;
+          float: right;
+          border-radius: 15px;
+        }
+
+        textarea{
+          border-radius: 0;
+          border: 0;
+        }
+     
+      }
+    }
+
+    .post-item{
+      .comments-reply{
+        position: relative;
+        bottom: 10px;
+      }
     }
 
   }
@@ -870,9 +918,9 @@ ul {
 
 
           p {
-            overflow: hidden; 
-            text-overflow: ellipsis; 
-            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             font-size: 12px;
             text-align: center;
           }

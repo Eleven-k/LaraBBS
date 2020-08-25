@@ -771,6 +771,51 @@ ul {
     position: absolute;
   }
 
+  .article-show .post-item-comments {
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: #f3f4ff;
+  }
+
+  .article-show .post-item-comments .item-comments {
+    margin: 20px 10px 0 20px;
+    float: left;
+  }
+
+  .article-show .post-item-comments .item-comments .post-item-userinfo-comments {
+    width: 40px;
+    height: 40px;
+  }
+
+  .article-show .post-item-comments .item-comments .post-item-userinfo-comments img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+
+  .article-show .post-item-comments form {
+    width: 100%;
+    margin: 20px 20px 20px 0;
+  }
+
+  .article-show .post-item-comments form .btn-sm {
+    margin-top: 10px;
+    position: relative;
+    float: right;
+    border-radius: 15px;
+  }
+
+  .article-show .post-item-comments form textarea {
+    border-radius: 0;
+    border: 0;
+  }
+
+  .article-show .post-item .comments-reply {
+    position: relative;
+    bottom: 10px;
+  }
+
   .follow-title {
     margin: 7px 0 15px;
     border-bottom: 1px solid #efefef;

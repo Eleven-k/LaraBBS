@@ -71,3 +71,6 @@ Route::get('/users/{user}/followers', 'UsersController@followers')->name('users.
 // 关注功能
 Route::post('/users/followers/{user}', 'FollowersController@store')->name('followers.store');
 Route::delete('/users/followers/{user}', 'FollowersController@destroy')->name('followers.destroy');
+
+// 文章回复
+Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
