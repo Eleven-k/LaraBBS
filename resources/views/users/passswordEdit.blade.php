@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title','全部-ROCBOSS')
+@section('title','Eleven')
 @section('content')
 <div class="content">
     <div class="container">

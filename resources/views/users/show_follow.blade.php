@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title','全部-ROCBOSS')
+@section('title','Eleven')
 @section('content')
 <div class="content">
     <div class="container">
@@ -52,13 +52,13 @@
                             <div class="col-4">
                                 <div class="sidebar">
                                     <div class="links-wrap">
-                                        <p>2019©ROCBOSSRoc's MeROCBOSSBatioVultr云主机阿里云主机免费云主机宝塔面板Dmit-HK高性能主机</p>
+                                        <p>2019©ELEVENRoc's MeELEVENBatioVultr云主机阿里云主机免费云主机宝塔面板Dmit-HK高性能主机</p>
                                     </div>
                                 </div>
 
                                 <div class="sidebar">
                                     <div class="links-wrap foot">
-                                        <a href="#">🔥ROCBOSS 3.0.0 Alpha开源版下载&安装</a>
+                                        <a href="#">🔥ELEVEN 3.0.0 Alpha开源版下载&安装</a>
                                     </div>
                                 </div>
 

@@ -5,31 +5,30 @@
             <div class="col-6">
                 <div class="container">
                     <div class="row">
-                        <div class="col"><a href="{{ route('index') }}" class="nav-title">ROCBOSS</a></div>
+                        <div class="col"><a href="{{ route('index') }}" class="nav-title">ELEVEN</a></div>
                         <div class="col">
                             <div class="input-group flex-nowrap">
                                 <input type="text" class="form-control" placeholder="请输入关键词回车搜索" aria-label="Username" aria-describedby="addon-wrapping">
                             </div>
                         </div>
                         <div class="col">
+                           
                             <div class="nav-right">
                                 @guest
                                 <a class="btn btn-primary create" href="register" role="button">注册</a>
                                 <a class="btn btn-primary login" href="login" role="button">登录</a>
                                 @else
-
-
-
-                
-
-
+                                <div class="prompt">
+                                    <div class="prompt-box"></div><span><a href="">0</a></span>
+                                    
+                                </div>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle" width="30px" height="30px" style="border-radius: 50%;">
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    @can('manage_contents')
+                                        @can('manage_contents')
                                         <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}">后台管理</a>
                                         @endcan
                                         <a class="dropdown-item" href="{{route('users.show',Auth::id())}}">我的主页</a>

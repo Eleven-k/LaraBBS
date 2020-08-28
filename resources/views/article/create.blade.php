@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title','全部-ROCBOSS')
+@section('title','Eleven')
 @section('content')
 <div class="content">
     <div class="container">
@@ -22,6 +22,7 @@
 
                         <div class="article">
                             <form action="{{ route('articles.store') }}" method="POST" accept-charset="UTF-8">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
                                 @include('shared._errors')
                                 {{ csrf_field() }}

@@ -12,8 +12,9 @@ class Category extends Model
         'name','description',
     ];
 
-    public function replies()
+    public function articles()
     {
-        return $this->hasMany(Reply::class);
+        return $this->hasMany(Article::class);
     }
+
 }

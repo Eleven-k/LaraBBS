@@ -54,8 +54,33 @@ ul {
             font-weight: 700;
           }
 
+
           .nav-right {
             float: right;
+
+            .prompt {
+              float: left;
+              height: 60px;
+              line-height: 60px;
+              width: 50px;
+              text-align: center;
+
+              .prompt-box {
+                height: 18px;
+                width: 24px;
+                margin: 22px 10px 10px 10px;
+                background-color: red;
+                border-radius: 10px;
+              }
+              a {
+                font-size: 14px;
+                position: relative;
+                top: -49px;
+                color: white;
+                right: 3px;
+              }
+
+            }
 
             .create {
               border-radius: 16px;
@@ -80,7 +105,7 @@ ul {
             .dropdown-toggle {
               height: 60px;
               line-height: 60px;
-              padding: 0 1.5rem;
+              padding: 0 1.7rem;
               font-size: 14px;
             }
 
@@ -200,7 +225,6 @@ ul {
             .post-item {
               width: 100%;
               border-bottom: 1px solid #efefef;
-              display: flex;
               position: relative;
 
               img {
@@ -225,9 +249,15 @@ ul {
               }
 
               .post-item-content {
-                padding: 25px 20px 25px 10px;
-                width: 100%;
-                float: initial;
+                padding: 25px 90px 25px 90px;
+
+
+
+                form {
+                  button {
+                    right: 10px;
+                  }
+                }
 
                 .nickname {
                   color: #14171a;
@@ -255,8 +285,13 @@ ul {
               }
 
               .post-item-praise {
-                width: 80px;
-                height: 100px;
+                position: absolute;
+                top: -8px;
+                right: 20px;
+
+                span {
+                  float: right;
+                }
 
                 .praise-wrap {
                   width: 50px;
@@ -846,7 +881,8 @@ ul {
         .post-item-userinfo-comments {
           width: 40px;
           height: 40px;
-          img{
+
+          img {
             width: 40px;
             height: 40px;
             border-radius: 5px;
@@ -866,18 +902,61 @@ ul {
           border-radius: 15px;
         }
 
-        textarea{
+        textarea {
           border-radius: 0;
           border: 0;
         }
-     
+
       }
     }
 
-    .post-item{
-      .comments-reply{
-        position: relative;
-        bottom: 10px;
+    .post-item {
+      width: 100%;
+      border-bottom: 1px solid #efefef;
+      padding-bottom: 20px;
+      position: relative;
+
+      .comments-reply {
+        width: 100%;
+        padding: 0 20px 0 70px;
+      }
+    }
+
+    .reply-container {
+      margin: 0 20px 0 70px;
+      background-color: #f7f9fb;
+
+      .reply-item {
+        width: 100%;
+        line-height: 24px;
+        padding: 10px 10px;
+
+        .reply-user {
+          a {
+            color: #2d8cf0;
+            font-size: 14px;
+          }
+        }
+
+        .reply-content {
+          color: #515a6e;
+          font-size: 14px;
+        }
+
+        .reply-operations {
+          font-size: 12px;
+          height: 24px;
+          line-height: 24px;
+          color: #a8b7c7;
+
+          button {
+            float: right;
+            position: relative;
+            bottom: 25px;
+            right: -9px;
+            font-size: 12px;
+          }
+        }
       }
     }
 
@@ -900,6 +979,7 @@ ul {
     width: 100%;
     max-width: 100%;
     margin: 0;
+    display: table;
 
     .post-item {
       border-bottom: none !important;
@@ -930,9 +1010,4 @@ ul {
 
   }
 
-}
-
-
-.offset-md-2 {
-  padding-top: 30px;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>@yield('title','全部-ROCBOSS')</title>
+    <title>@yield('title','Eleven')</title>
     <meta charset="UTF-8">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="/css/iconfont.css">
@@ -21,7 +21,7 @@
         <div class="layout-footer">
             <div class="footer-wrap">
                 <div class="footer-container">
-                    Powered By <a href="https://rocboss.com" target="_blank">ROCBOSS v3.0.0 Alpha</a>
+                    Powered By <a href="https://ELEVEN.com" target="_blank">ELEVEN v3.0.0 Alpha</a>
                     © 2014-2020.
                     <a href="#" target="_blank">浙ICP备15008828号-2</a>
                 </div>

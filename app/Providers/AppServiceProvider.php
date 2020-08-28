@@ -2,8 +2,12 @@
 
 namespace App\Providers;
 
+use App\Models\Reply;
+use App\Models\Article;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Observers\ArticleObserver;
+use App\Observers\ReplyObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +30,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
+        Article::observe(ArticleObserver::class);
+        Reply::observe(ReplyObserver::class);
     }
 }

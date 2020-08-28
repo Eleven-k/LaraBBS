@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::get('/article/{article}','ArticlesController@show')->name('show');
+// Route::get('/article/{article}','PagesController@show')->name('show');
+Route::get('article/{article}/{slug?}', 'PagesController@show')->name('show');
+Route::get('/attention','PagesController@attentionIndex')->name('attention.index');
 
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -73,4 +75,8 @@ Route::post('/users/followers/{user}', 'FollowersController@store')->name('follo
 Route::delete('/users/followers/{user}', 'FollowersController@destroy')->name('followers.destroy');
 
 // 文章回复
-Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+Route::resource('comments', 'RepliesController', ['only' => ['store', 'destroy']]);
+
+// Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+Route::post('/replies', 'RepliesController@replyStore')->name('replies.store');
+Route::delete('/replies/{replies}', 'RepliesController@replyDestroy')->name('replies.destroy');

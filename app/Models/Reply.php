@@ -8,7 +8,7 @@ class Reply extends Model
 {
     protected $fillable=['content','article_id'];
 
-    public function article()
+    public function articles()
     {
         return $this->belongsTo(Article::class);
     }
@@ -17,4 +17,5 @@ class Reply extends Model
     {
         return $this->belongsTo(User::class);
     }
+    
 }

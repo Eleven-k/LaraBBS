@@ -20,13 +20,13 @@ class ArticlesPolicy
         //
     }
 
+    public function update(Article $article,User $user)
+    {
+        return $article->user_id === $user->id;
+    }
+
     public function destroy(User $user, Article $article)
     {
         return $user->id === $article->user_id;
-    }
-
-    public function update(User $user, Article $article)
-    {
-        return $article->user_id == $user->id;
     }
 }

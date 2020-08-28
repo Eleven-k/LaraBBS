@@ -15,6 +15,10 @@ class ArticlesController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $this->middleware('guest', [
+            'only' => ['show']
+        ]);
     }
 
     // 创建文章页面
@@ -61,9 +65,9 @@ class ArticlesController extends Controller
     // 编辑文章页面
     public function edit(Article $article)
     {
-        // $this->authorize('update', $article);
+        $this->authorize('update', $article);
         $categories = Category::all();
-        return view('article.edit', compact('article','categories'));
+        return view('article.edit', compact('article', 'categories'));
     }
 
     // 编辑文章方法
@@ -77,16 +81,11 @@ class ArticlesController extends Controller
     // 删除文章
     public function destroy(Article $article)
     {
-        $this->authorize('destroy', $article);
+       $this->authorize('destroy',$article);
         $article->delete();
-        session()->flash('success', '微博已被成功删除！');
-        return redirect()->back();
+        session()->flash('success', '文章已被成功删除！');
+        return redirect()->route('index', $article->id);
     }
 
-    // 文章详情显示
-    public function show(Article $article,User $user)
-    {
-        return view('article.show', compact('article','user'));
-    }
-
+    
 }
